@@ -1,6 +1,6 @@
 ---
 title: "rr2"
-author: "Student Name"
+author: "Andrew Chuang"
 date: "January 25, 2017"
 output: html_document
 ---
@@ -23,15 +23,15 @@ generate.data <- function(n){
   X = matrix(rnorm(2*n), n, 2)
   epsilon = rnorm(n)
   beta = runif(3, -1, 1) 
-  y = # how would you generate y from a linear model?
+  y = cbind(1,X)%*%beta + epsilon# how would you generate y from a linear model?
   df = data.frame(y=y, X1 = X[,1], X2 = X[,2])
   return(df)
 }
 
 estimate.and.plot <- function(dataframe, ...){
   mdl = lm(y~X1+X2, data=dataframe)
-  resids = # how do you get residuals?
-  fit =  # how do you get the fitted values?
+  resids = residuals(mdl)# how do you get residuals?
+  fit =  fitted(mdl)# how do you get the fitted values?
   par(mfrow=c(2,2))
   with(dataframe, { ## Answer a question below about this line
     plot(y~fit, las=1, pch=19,...)
@@ -60,4 +60,4 @@ knitr::kable(summary(mdl)$coef, digits=3)
 
 ## 3. What does the `with` function do? Use `?with` to find out.
 
-
+with() is a function that uses a specfic object and does specific actions (the "expr" portion of the input arguments) on the object.

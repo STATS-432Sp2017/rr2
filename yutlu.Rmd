@@ -59,5 +59,4 @@ knitr::kable(summary(mdl)$coef, digits=3)
 ```
 
 ## 3. What does the `with` function do? Use `?with` to find out.
-
 With evaluate the several functions down below and constructed from data.We can help a list or a data frame to get what we want. 

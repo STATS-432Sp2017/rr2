@@ -5,8 +5,8 @@ date: "January 25, 2017"
 output: html_document
 ---
 
+2. Rename this file with your student ID or IDs (for easy grading).
 1. Change the author to your name, or you and the friend with whom you are working.
-2. Rename this file with your student ID (for easy grading)
 3. Complete the three tasks below and push the Rmd back to Github.
 
 

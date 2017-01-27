@@ -1,6 +1,6 @@
 ---
 title: "rr2"
-author: "Student Name"
+author: "Eungoo (Eugene) Kahng"
 date: "January 25, 2017"
 output: html_document
 ---
@@ -23,7 +23,7 @@ generate.data <- function(n){
   X = matrix(rnorm(2*n), n, 2)
   epsilon = rnorm(n)
   beta = runif(3, -1, 1) 
-  y = # how would you generate y from a linear model?
+  y = cbind(1,X) %*% beta +epsilon# how would you generate y from a linear model?
   df = data.frame(y=y, X1 = X[,1], X2 = X[,2])
   return(df)
 }
@@ -60,4 +60,5 @@ knitr::kable(summary(mdl)$coef, digits=3)
 
 ## 3. What does the `with` function do? Use `?with` to find out.
 
+'with' function lets the dataframe you set run the particular indicated methods such as 'plot' and 'qqplot' 
 

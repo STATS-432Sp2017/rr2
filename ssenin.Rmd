@@ -51,7 +51,7 @@ estimate.and.plot <- function(dataframe, ...){
 # 2. Estimate the model with the second function.
 # 3. Uncomment the code below to include a table with coefficient 
 #    estimates (replace mdl with the correct output from the second
-#    function)
+#    function).
 
 dataframe = generate.data(100)
 mdl = estimate.and.plot(dataframe)
